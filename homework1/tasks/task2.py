@@ -8,6 +8,15 @@ from typing import Sequence
 
 
 def check_fibonacci(data: Sequence[int]) -> bool:
+    """Function returns True, if the given sequence is a Fibonacci sequence and False otherwise.
+
+    Args:
+        data: The sequence of integers.
+
+    Returns:
+        The return value. True for success, False otherwise.
+
+    """
     if len(data) < 3:
         return False
     else:
