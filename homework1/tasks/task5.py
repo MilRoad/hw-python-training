@@ -10,7 +10,7 @@ from typing import List
 
 
 def find_maximal_subarray_sum(nums: List[int], k: int) -> int:
-    """Function finds a sub-array with length equal to "k", with maximal sum.
+    """Finds a sub-array with length equal to "k", with maximal sum.
 
     Args:
         nums: The list of integers.
@@ -20,12 +20,16 @@ def find_maximal_subarray_sum(nums: List[int], k: int) -> int:
         The maximal sum of a sub-array.
 
     """
-    res = 0
-    if k > 0:
-        for i in range(len(nums) - k + 1):
-            tmp = 0
-            for j in range(k):
-                tmp += nums[i + j]
-            if tmp > res:
-                res = tmp
-    return res
+    try:
+        if k <= 0:
+            raise ValueError("k should be more than 0")
+        else:
+            res = 0
+            for i in range(len(nums) - k + 1):
+                tmp = sum(nums[i : i + k])
+                if tmp > res:
+                    res = tmp
+            return res
+    except ValueError as err:
+        print(err)
+        return 0

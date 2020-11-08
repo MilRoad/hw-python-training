@@ -36,7 +36,7 @@ from homework1.tasks.task2 import check_fibonacci
         ),
         ([0, 1, 1], True),
         ([0, 1], False),
-        ([2, 3, 5], True),
+        ([2, 3, 5], False),
     ],
 )
 def test_check_fibonacci(value: Sequence[int], expected_result: bool):

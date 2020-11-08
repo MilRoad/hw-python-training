@@ -14,7 +14,7 @@ from homework1.tasks.task5 import find_maximal_subarray_sum
     ],
 )
 def test_find_maximal_subarray_sum(
-    nums_value: List[int], k_value: int, expected_result: bool
+    nums_value: List[int], k_value: int, expected_result: int
 ):
     actual_result = find_maximal_subarray_sum(nums_value, k_value)
 

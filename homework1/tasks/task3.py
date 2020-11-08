@@ -12,7 +12,7 @@ from typing import Tuple
 
 
 def find_maximum_and_minimum(file_name: str) -> Tuple[int, int]:
-    """Function reads input line-by-line and returns a tuple with the max and min value.
+    """Reads input line-by-line and returns a tuple with the max and min value.
 
     Args:
         file_name: The name of input file.

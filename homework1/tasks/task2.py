@@ -8,25 +8,27 @@ from typing import Sequence
 
 
 def check_fibonacci(data: Sequence[int]) -> bool:
-    """Function returns True, if the given sequence is a Fibonacci sequence and False otherwise.
+    """Checks if the given sequence is a Fibonacci sequence.
 
     Args:
         data: The sequence of integers.
 
     Returns:
-        The return value. True for success, False otherwise.
+        True if the given sequence is a Fibonacci sequence, False otherwise.
 
     """
     if len(data) < 3:
         return False
     else:
         a, b, c = data[0], data[1], data[2]
+        if a != 0 and b != 1 and c != 1:
+            return False
+        else:
+            while len(data) >= 3:
+                if not a + b == c:
+                    return False
+                if len(data) > 3:
+                    a, b, c = b, c, data[3]
+                data = data[1:]
 
-        while len(data) >= 3:
-            if not a + b == c:
-                return False
-            if len(data) > 3:
-                a, b, c = b, c, data[3]
-            data = data[1:]
-
-        return True
+            return True
