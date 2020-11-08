@@ -1,0 +1,7 @@
+black
+flake8
+isort
+pre-commit
+pytest
+pytest-sugar
+seed-isort-config
